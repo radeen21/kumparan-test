@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="album"
+            type="com.example.data.dto.AlbumDataDto" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tvAlbumTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="album"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="Lorem Ipsum"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlbumTitle"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_photo"
+            tools:layout_marginTop="16dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#45CACACA"
+            app:layout_constraintTop_toBottomOf="@+id/rvPhoto"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

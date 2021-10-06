@@ -1,0 +1,7 @@
+include ':detail'
+include ':base'
+include ':home'
+include ':domain'
+include ':data'
+include ':app'
+rootProject.name = "KumparanTest"
